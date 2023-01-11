@@ -5,6 +5,7 @@ import img3 from "../../../assets/image-product-3.jpg";
 import img4 from "../../../assets/image-product-4.jpg";
 import addToCart from "../../../assets/icon-cart.svg";
 import { contextAPI } from '../../UseContext/useContex';
+import ImageModal from './ImageModal';
 
 const Women = () => {
     const [selectedImgIndex, setSelectedImgIndex] = useState(0);
@@ -15,7 +16,9 @@ const Women = () => {
         <div className='mt-20 h-screen lg:grid grid-cols-2 gap-x-40'>
             <div>
                 <div>
-                    <img className='lg:w-[600px] rounded-xl' src={shoeImgArray[selectedImgIndex]} alt="" />
+                    <label htmlFor="sneakerz-modal" className="cursor-pointer">
+                        <img className='lg:w-[600px] rounded-xl' src={shoeImgArray[selectedImgIndex]} alt="" />
+                    </label>
                 </div>
                 <div className='grid grid-cols-4 gap-x-4 lg:w-[530px] mt-10'>
                     {
@@ -51,7 +54,7 @@ const Women = () => {
 
                 <div>
                     <p className='text-[#ce7e53] font-bold tracking-wider mb-2'>SNEAKER COMPANY</p>
-                    <h1 className='text-5xl font-semibold'>Fall Limited <br />Sneakers</h1>
+                    <h1 className='text-5xl font-semibold tracking-wide' style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Fall Limited Edition<br />Sneakers</h1>
                 </div>
 
                 <div>
@@ -94,6 +97,7 @@ const Women = () => {
                     </div>
                 </div>
             </div>
+            <ImageModal shoeImgArray={shoeImgArray} />
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import profileAvatar from "../../../assets/image-avatar.png";
+import profileAvatar from "../../../assets/bg2.png";
 import hamburger from "../../../assets/icon-hamburger.svg";
 import productImage from "../../../assets/image-product-1.jpg";
 import deleteIcon from "../../../assets/icon-delete.svg";
@@ -51,13 +51,13 @@ const Navbar = () => {
                         <img src={hamburger} alt="" />
                     </label>
                 </div>
-                <Link className="btn btn-ghost lowercase lg:hidden font-bold text-xl">sneakerz</Link>
+                <Link className="btn btn-ghost lowercase lg:hidden font-bold text-xl" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>sneakerz</Link>
             </div>
 
 
             <div className="navbar-center hidden lg:flex justify-between lg:w-full items-center h-full">
                 <div className='h-full'>
-                    <Link className="btn !bg-transparent border-none lowercase font-bold text-3xl text-black">sneakerz</Link>
+                    <Link className="btn !bg-transparent border-none lowercase font-extrabold text-4xl text-black" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>sneakerz</Link>
                     <ul className="menu menu-horizontal px-1 text-black h-full gap-x-2">
                         {navLink}
                     </ul>
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 <span className="badge badge-sm indicator-item bg-secondary border-none text-white">{shoeQuantity}</span>
                             </div>
                         </label>
-                        <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-72 bg-base-100 shadow-lg rounded-md">
+                        <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-80 bg-base-100 shadow-lg rounded-md">
                             <div className="card-body">
                                 <div>
                                     <h3 className='font-semibold'>Cart</h3>
@@ -87,7 +87,7 @@ const Navbar = () => {
                                                 <h4 className='font-semibold text-lg text-gray-400'>Fall Limited Sneakers</h4>
                                                 <h4 className='font-semibold text-lg text-gray-400'>$125.00 x {shoeQuantity} = <span className='font-extrabold text-black'>${totalPrice}</span></h4>
                                             </div>
-                                            <div className='h-8 w-8 rounded-full bg-secondary flex justify-center items-center'>
+                                            <div className='h-10 w-10 rounded-full bg-secondary flex justify-center items-center'>
                                                 <button onClick={() => setShoeQuantity(0)}><img src={deleteIcon} alt="" /></button>
                                             </div>
                                         </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
                     </div>
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 h-10 rounded-full border-4 border-orange-700">
+                            <div className="w-12 h-12 rounded-full">
                                 <img src={profileAvatar} alt='avatar' />
                             </div>
                         </label>
