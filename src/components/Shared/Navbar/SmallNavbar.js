@@ -37,7 +37,7 @@ const SmallNavbar = () => {
             <button onClick={() => setIsOpen(!isOpen)} className='w-10 h-10 rounded-full text-white  flex justify-center items-center mt-4 ml-3'>
                 <img src={closeIcon} alt="" />
             </button>
-            <ul className='py-10'>
+            <ul className='p-10 flex flex-col gap-y-5 font-bold text-lg'>
                 {navLink}
             </ul>
         </div>

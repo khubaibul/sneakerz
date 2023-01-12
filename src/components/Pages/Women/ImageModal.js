@@ -10,6 +10,10 @@ const ImageModal = ({ shoeImgArray }) => {
                 <div className="modal-box relative bg-transparent shadow-none">
                     <label htmlFor="sneakerz-modal" className="btn btn-sm btn-circle absolute right-2 top-2 text-secondary text-lg font-extrabold">✕</label>
                     <img src={shoeImgArray[selectedImgIndex]} className="mt-8 rounded-xl" alt="" />
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-1 right-1 top-72">
+                        <button onClick={() => setSelectedImgIndex(selectedImgIndex - 1)} disabled={selectedImgIndex === 0} className="btn btn-circle bg-white border-0 hover:bg-white text-secondary">❮</button>
+                        <button onClick={() => setSelectedImgIndex(selectedImgIndex + 1)} disabled={selectedImgIndex === 3} className="btn btn-circle bg-white border-0 hover:bg-white text-secondary">❯</button>
+                    </div>
                     <div className='grid grid-cols-4 gap-x-4 lg:w-[450px] mt-10 mx-auto'>
                         {
                             shoeImgArray.map((shoeImg, index) =>
