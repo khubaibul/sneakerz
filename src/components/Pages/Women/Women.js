@@ -6,11 +6,14 @@ import img4 from "../../../assets/image-product-4.jpg";
 import addToCart from "../../../assets/icon-cart.svg";
 import { contextAPI } from '../../UseContext/useContex';
 import ImageModal from './ImageModal';
+import useDynamicTitle from '../../Hooks/useDynamicTitle';
 
 const Women = () => {
     const [selectedImgIndex, setSelectedImgIndex] = useState(0);
     const [quantity, setQuantity] = useState(0)
     const { shoeQuantity, setShoeQuantity } = useContext(contextAPI);
+
+    useDynamicTitle("Women")
 
     const shoeImgArray = [img1, img2, img3, img4];
     return (
