@@ -8,5 +8,5 @@
 - CSS3
 - Tailwind
 - React
-- React Router D
+- React Router DO
  
