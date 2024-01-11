@@ -8,4 +8,4 @@
 - CSS3
 - Tailwind
 - React
-- React Rou
+- React Rout
